@@ -464,10 +464,19 @@ if sec == 7 and language ==1 :
                  
                  new_word_list.append(str(bn))  
                  new_word_list.append(' ')
-                 
+
+             temp=1
+             d=0
+             while (temp<2) :
+                 check = (e*d) % fi  
+                 if check == 1:
+                     break
+                 else:
+                     d=d+1   
               
              new_word=' '.join(new_word_list)
              print("The encrypted text according to the RSA method: ",new_word)
+             print("The number d to be used as a secret key: ",d)
              break
 
 if sec == 7 and language ==2 :
@@ -500,9 +509,20 @@ if sec == 7 and language ==2 :
                  new_word_list.append(str(bn))
                  new_word_list.append(' ') 
                  
-              
+             
+             temp=1
+             d=0
+             while (temp<2) :
+                 check = (e*d) % fi  
+                 if check == 1:
+                     break
+                 else:
+                     d=d+1
+
              new_word=' '.join(new_word_list)
              print("RSA yöntemine göre şifrelenmiş metin: ",new_word)
+             print("Gizli anahtar olarak kullanılacak d sayısı: ",d)
+             
              break
             
 if sec == 8 and language ==1:
@@ -531,15 +551,8 @@ if sec == 8 and language ==1:
          print("p and q have to be coprime.Try again !")
 
 
- e=int(input("Enter the number e: "))
- temp=1
- d=0
- while (temp<2) :
-     check = (e*d) % fi  
-     if check == 1:
-         break
-     else:
-         d=d+1
+ d=int(input("Enter the number d: "))
+
 
  length=len(number_list)
 
@@ -583,15 +596,8 @@ if sec == 8 and language ==2:
          print("p ve q aralarında asal olmalı.Tekrar deneyin !")
 
 
- e=int(input("e sayısını giriniz: "))
- temp=1
- d=0
- while (temp<2) :
-     check = (e*d) % fi  
-     if check == 1:
-         break
-     else:
-         d=d+1
+ d=int(input("d sayısını giriniz: "))
+
  
  length=len(number_list)
 
@@ -730,6 +736,7 @@ if sec == 10 and language ==2 :
 
 
 #if sec == 11 and language ==2 : #AES (Advanced Encryption Standard)
+
 
 
 
